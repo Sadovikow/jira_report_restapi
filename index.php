@@ -112,7 +112,7 @@ if (file_exists("access.php")) {
                                         }
                                     ?>
                                     <tr>
-                                        <td><a href="http://jira:8080/browse/WEB-886" target="_blank"><?=$task['key']?></a></td>
+                                        <td><a href="<?=JIRA_URL?>/browse/<?=$task['key']?>" target="_blank"><?=$task['key']?></a></td>
                                         <td><?=$task['fields']['summary']?></td>
                                         <td><?=$task['fields']['components'][0]['name']?></td>
                                         <td class="<?=$classStatus?>"><?=$task['fields']['status']['name']?></td>
