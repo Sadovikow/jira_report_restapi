@@ -104,12 +104,18 @@ if (file_exists("access.php")) {
                                 <tbody>
                                     <?php
                                     foreach ($arSprintTasks as $key => $task):
+					$classStatus = '';
+                                        if($task['fields']['status']['name'] == 'Готово' || $task['fields']['status']['name'] == 'Принято') {
+                                            $classStatus = 'table--green_cell';
+                                        } else if($task['fields']['status']['name'] == 'В работе') {
+                                            $classStatus = 'table--yellow_cell';
+                                        }
                                     ?>
                                     <tr>
                                         <td><a href="http://jira:8080/browse/WEB-886" target="_blank"><?=$task['key']?></a></td>
                                         <td><?=$task['fields']['summary']?></td>
                                         <td><?=$task['fields']['components'][0]['name']?></td>
-                                        <td><?=$task['fields']['status']['name']?></td>
+                                        <td class="<?=$classStatus?>"><?=$task['fields']['status']['name']?></td>
                                         <td><?=$task['fields']['assignee']['name']?></td>
                                         <td><?=$task['fields']['aggregatetimeestimate']/60/60?></td>
                                         <td><?=$task['fields']['creator']['name']?></td>
