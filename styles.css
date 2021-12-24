@@ -301,6 +301,16 @@ td.table--red_cell {
 	font-weight: bold;
 }
 
+td.table--green_cell {
+	color: green;
+	font-weight: bold;
+}
+
+td.table--yellow_cell {
+	color: sandybrown;
+	font-weight: bold;
+}
+
 .table--left {
 	float: left;
 	width: 49.5%;
