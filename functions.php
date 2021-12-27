@@ -49,7 +49,7 @@ function getSprintTasks($link) {
 	curl_setopt_array($ch, array(
 		CURLOPT_URL => $link,
 		CURLOPT_USERPWD => USERNAME . ':' . PASSWORD,
-		CURLOPT_HTTPHEADER => array('Content-type: application/json', 'Authorization: Bearer NDI2NjYwNjMyOTE3Oly7w/KEBRRpomI0EjoK1ijke57I'),
+		CURLOPT_HTTPHEADER => array('Content-type: application/json', 'Authorization: Bearer NDI2dgfget34erwe57I'),
 		CURLOPT_RETURNTRANSFER => true
 	));
 	$result = curl_exec($ch);
